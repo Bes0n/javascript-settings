@@ -33,8 +33,7 @@ project {
 
     buildType(id01FastTests)
     buildType(id02Chrome)
-    buildType(id03IE)
-    buildType(id04DeployToStaging)
+    buildType(id03DeployToStaging)
 
     template(Template_1)
 }
@@ -64,24 +63,10 @@ object id02Chrome : BuildType({
     }
 })
 
-object id03IE : BuildType({
-    templates(Template_1)
-    id("03IE")
-    name = "03. Internet Explorer"
 
-    params {
-        param("Browser", "IE")
-    }
-
-    dependencies {
-        snapshot(id01FastTests) {
-        }
-    }
-})
-
-object id04DeployToStaging : BuildType({
-    id("04DeployToStaging")
-    name = "04. Deploy To Staging"
+object id03DeployToStaging : BuildType({
+    id("03DeployToStaging")
+    name = "03. Deploy To Staging"
 
     vcs {
         root(HttpsGithubComBes0nTeamcityCourseCardsGit)
@@ -96,8 +81,7 @@ object id04DeployToStaging : BuildType({
     dependencies {
         snapshot(id02Chrome) {
         }
-        snapshot(id03IE) {
-        }
+
     }
 })
 
