@@ -31,8 +31,9 @@ project {
 
     vcsRoot(HttpsGithubComBes0nTeamcityCourseCardsGit)
 
-    buildType(id03DeployToStaging)
+    buildType(id04DeployToStaging)
     buildType(id02Chrome)
+    buildType(id03Firefox)
     buildType(id01FastTests)
 
     template(Template_1)
