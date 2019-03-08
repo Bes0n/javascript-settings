@@ -104,7 +104,7 @@ object Template_1 : Template({
         script {
             name = "npm_test"
             id = "RUNNER_4"
-            scriptContent = "npm test -- --single-run --browsers %Browser% --colors false --reporters teamcity"
+            scriptContent = "npm test -- --single-run --browsers %Browser% --colors false"
         }
     }
 })
