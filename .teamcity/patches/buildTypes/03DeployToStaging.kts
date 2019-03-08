@@ -18,7 +18,8 @@ changeBuildType(RelativeId("03DeployToStaging")) {
             }
         }
         trigger1.apply {
-            watchChangesInDependencies = true
+            perCheckinTriggering = true
+            enableQueueOptimization = false
         }
     }
 }
