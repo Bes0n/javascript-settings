@@ -63,9 +63,24 @@ object id02Chrome : BuildType({
     }
 })
 
+object id02Chrome : BuildType({
+    templates(Template_1)
+    id("03Chrome")
+    name = "03. Firefox"
+
+    params {
+        param("Browser", "Firefox")
+    }
+
+    dependencies {
+        snapshot(id01FastTests) {
+        }
+    }
+})
+
 object id03DeployToStaging : BuildType({
-    id("03DeployToStaging")
-    name = "03. Deploy To Staging"
+    id("04DeployToStaging")
+    name = "04. Deploy To Staging"
 
     vcs {
         root(HttpsGithubComBes0nTeamcityCourseCardsGit)
@@ -104,7 +119,7 @@ object Template_1 : Template({
         script {
             name = "npm_test"
             id = "RUNNER_4"
-            scriptContent = "npm test -- --single-run --browsers %Browser% --colors false"
+            scriptContent = "npm test -- --single-run --browsers %Browser% --colors false --reporters teamcity"
         }
     }
 })
