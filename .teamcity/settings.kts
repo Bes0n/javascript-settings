@@ -63,9 +63,9 @@ object id02Chrome : BuildType({
     }
 })
 
-object id02Chrome : BuildType({
+object id03Firefox : BuildType({
     templates(Template_1)
-    id("03Chrome")
+    id("03Firefox")
     name = "03. Firefox"
 
     params {
