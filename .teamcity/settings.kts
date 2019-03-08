@@ -72,6 +72,18 @@ object id03DeployToStaging : BuildType({
         root(HttpsGithubComBes0nTeamcityCourseCardsGit)
     }
 
+    steps {
+        script {
+            name = "IIS Deploy"
+            id = "RUNNER_6"
+            scriptContent = """
+                rmdir /S /Q \inetpub\wwwroot
+                xcopy /S /I /Y app \inetpub\wwwroot
+            """.trimIndent()
+        }
+
+    }
+
     triggers {
         vcs {
             branchFilter = ""
