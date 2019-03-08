@@ -10,15 +10,10 @@ accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("04DeployToStaging")) {
     dependencies {
-        expect(RelativeId("03Firefox")) {
+        expect(RelativeId("03IE")) {
             snapshot {
             }
         }
-        update(RelativeId("03Firefox")) {
-            snapshot {
-                onDependencyFailure = FailureAction.FAIL_TO_START
-            }
         }
 
     }
-}
