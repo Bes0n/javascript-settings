@@ -31,10 +31,10 @@ project {
 
     vcsRoot(HttpsGithubComBes0nTeamcityCourseCardsGit)
 
-    buildType(id04DeployToStaging)
+    buildType(id01FastTests)
     buildType(id02Chrome)
     buildType(id03Firefox)
-    buildType(id01FastTests)
+    buildType(id04DeployToStaging)
 
     template(Template_1)
 }
