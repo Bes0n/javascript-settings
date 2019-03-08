@@ -78,7 +78,7 @@ object id03Firefox : BuildType({
     }
 })
 
-object id03DeployToStaging : BuildType({
+object id04DeployToStaging : BuildType({
     id("04DeployToStaging")
     name = "04. Deploy To Staging"
 
