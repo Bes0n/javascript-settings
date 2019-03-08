@@ -96,6 +96,8 @@ object id04DeployToStaging : BuildType({
     dependencies {
         snapshot(id02Chrome) {
         }
+        snapshot(id03Firefox) {
+        }
     }
 })
 
